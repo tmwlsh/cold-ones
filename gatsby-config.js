@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "cold-ones",
+    siteUrl: `https://www.cold-ones.com`,
+    title: `cold-ones`,
   },
-  plugins: ["gatsby-plugin-react-helmet"],
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`
+  ],
 };
