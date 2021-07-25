@@ -1,2 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap");
 
+// fonts
+$poppins: "Poppins", sans-serif;
 
+// colours
+$teal: #00ffb4;
+$dTeal: #006547;
+$white: #ffffff;
+$grey: #292e30;
+
+// misc
+$transition: cubic-bezier(0.86, 0.1, 0.14, 0.9);
+
+// breakpoints
+$mobile: 540px;
+$tablet: 768px;
+$desktop: 1200px;
