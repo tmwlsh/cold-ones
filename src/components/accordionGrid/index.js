@@ -34,7 +34,7 @@ const AccordionGrid = () => {
       <Container>
         {isError && <div>Something went wrong ...</div>}
         {isLoading ? (
-          <div>Loading brewskies ...</div>
+          <div className={styles.loading}>Loading brewskies ...</div>
         ) : (
           <ul className={styles.accordionGridList}>
             {data.splice(0, 12).map(beer => (
