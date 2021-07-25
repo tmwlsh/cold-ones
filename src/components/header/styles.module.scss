@@ -73,20 +73,30 @@
 .header-scroll-text {
   color: $white;
   margin: 0;
-  font-size: 28px;
+  font-size: 18px;
   letter-spacing: 30px;
   font-family: $poppins;
   text-transform: uppercase;
-  left: 10%;
+  left: 12%;
   z-index: 100;
   position: fixed;
   transform: translate(-50%, -50%) rotate(-90deg);
-  top: 35%;
-  width: 100%;
+  top: calc(30% - 17px);
+  width: 100vh;
   text-align: center;
 
   &:last-of-type {
-    left: 90%;
+    top: 30%;
+    left: 88%;
     transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  @media all and (min-width: $tablet) {
+    top: calc(50% - 17px);
+    font-size: 28px;
+
+    &:last-of-type {
+      top: 50%;
+    }
   }
 }

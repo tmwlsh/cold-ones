@@ -7,4 +7,27 @@
 }
 
 .accordion-grid-list {
+  margin: 0;
+  padding: 0;
+  z-index: 200;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: stretch;
+  justify-content: space-between;
+
+  li {
+    padding: 0;
+    flex: 0 0 100%;
+    margin: 0 0 30px 0;
+    list-style-type: none;
+
+    @media all and (min-width: $tablet) {
+      flex: 0 0 calc(50% - 15px);
+    }
+
+    @media all and (min-width: $desktop) {
+      flex: 0 0 calc(33.333% - 15px);
+    }
+  }
 }

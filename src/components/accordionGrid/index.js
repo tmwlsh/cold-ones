@@ -37,7 +37,7 @@ const AccordionGrid = () => {
           <div>Loading brewskies ...</div>
         ) : (
           <ul className={styles.accordionGridList}>
-            {data.map(beer => (
+            {data.splice(0, 12).map(beer => (
               <li key={beer.id}>
                 <Accordion data={beer} />
               </li>
