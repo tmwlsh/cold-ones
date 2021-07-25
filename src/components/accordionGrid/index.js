@@ -24,7 +24,7 @@ const AccordionGrid = () => {
       }
       setTimeout(() => {
         setIsLoading(false);
-      }, 2000);
+      }, 1000);
     };
     fetchData();
   }, []);
@@ -36,13 +36,16 @@ const AccordionGrid = () => {
         {isLoading ? (
           <div className={styles.loading}>Loading brewskies ...</div>
         ) : (
-          <ul className={styles.accordionGridList}>
-            {data.splice(0, 12).map(beer => (
-              <li key={beer.id}>
-                <Accordion data={beer} />
-              </li>
-            ))}
-          </ul>
+          <>
+            <h3>Our Favourites</h3>
+            <ul className={styles.accordionGridList}>
+              {data.splice(0, 12).map(beer => (
+                <li key={beer.id}>
+                  <Accordion data={beer} />
+                </li>
+              ))}
+            </ul>
+          </>
         )}
       </Container>
     </div>
