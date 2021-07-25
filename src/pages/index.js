@@ -1,11 +1,12 @@
 import * as React from "react";
 
 import { Layout } from "../components/layout";
+import { AccordionGrid } from "../components/accordionGrid";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <h1>Index Page</h1>
+      <AccordionGrid />
     </Layout>
   )
 }
