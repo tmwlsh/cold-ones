@@ -22,7 +22,7 @@ const BlogRow = ({data}) => {
           { data && (
             <ul className={styles.blogRowGrid}>
               {data.map(post => (
-                <li>
+                <li key={post.id}>
                   <img src={post.imageSrc} alt={post.title} />
                   <Link onClick={e => fakeBlogRedirect(e)} to={post.url} className={styles.blogPostCta}>
                     <Chevron />

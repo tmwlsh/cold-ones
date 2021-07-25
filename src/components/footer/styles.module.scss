@@ -1,3 +1,43 @@
-@import "../" .footer {
+@import "../../sass/variables.scss";
+
+.footer {
+  padding: 50px 0;
   background-color: $grey;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    color: $teal;
+    font-size: 16px;
+    font-family: $poppins;
+
+    a {
+      color: inherit;
+      position: relative;
+      text-decoration: none;
+
+      &:after {
+        left: 0;
+        width: 0%;
+        content: "";
+        height: 2px;
+        bottom: -4px;
+        position: absolute;
+        background-color: $white;
+        transition: 0.25s $transition;
+      }
+
+      @media all and (min-width: $tablet) {
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
