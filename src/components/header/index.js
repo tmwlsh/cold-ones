@@ -1,14 +1,12 @@
 import React from "react";
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 
 import * as styles from "./styles.module.scss";
 
 import headerImg from "../../images/header.jpg";
 
 const Header = () => {
-
-  const slideToBeers = (e) => {
-    e.preventDefault();
-  }
 
   return (
     <header className={styles.header}>
@@ -18,7 +16,7 @@ const Header = () => {
       <div className={styles.headerContent}>
         <h1 className={styles.headerTitle}>Cold<span>Ones</span></h1>
         <button
-          onClick={e => slideToBeers(e)}
+          onClick={() => scrollTo('#beers-grid')}
           className={styles.headerCta}
         >
           View Brewskies

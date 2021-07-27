@@ -55,7 +55,7 @@ const AccordionGrid = () => {
   }, [sortType]);
 
   return (
-    <div className={styles.accordionGrid}>
+    <div className={styles.accordionGrid} id="beers-grid">
       <Container>
         <h3>Our Favourites</h3>
         <div className={styles.sortDropdown}>
