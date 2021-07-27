@@ -16,11 +16,14 @@ const AccordionGrid = () => {
   const [sortType, setSortType] = useState();
 
   const selectChange = (e) => {
-    console.log('sortType', sortType);
     if (e.target.value === 'ABV High to Low') {
       setSortType('high to low')
     } else if (e.target.value === 'ABV Low to High') {
       setSortType('low to high')
+    } else if (e.target.value === 'Name A - Z') {
+      setSortType('name a-z')
+    } else if (e.target.value === 'Name Z - A') {
+      setSortType('name z-a')
     }
   }
 
@@ -31,9 +34,13 @@ const AccordionGrid = () => {
       try {
         const result = await axios('https://api.punkapi.com/v2/beers');
         if (sortType === 'high to low') {
-          setData(result.data.splice(0, 12).sort((a, b) => (a.abv < b.abv) ? 1 : -1));
+          data.sort((a, b) => (a.abv < b.abv) ? 1 : -1);
         } else if (sortType === 'low to high') {
-          setData(result.data.splice(0, 12).sort((a, b) => (a.abv > b.abv) ? 1 : -1));
+          data.sort((a, b) => (a.abv > b.abv) ? 1 : -1);
+        } else if (sortType === 'name a-z') {
+          data.sort((a, b) => (a.name > b.name) ? 1 : -1);
+        } else if (sortType === 'name z-a') {
+          data.sort((a, b) => (a.name < b.name) ? 1 : -1);
         } else {
           setData(result.data.splice(0, 12));
         }
@@ -57,6 +64,8 @@ const AccordionGrid = () => {
             <option defaultValue disabled hidden>Sort by</option>
             <option>ABV High to Low</option>
             <option>ABV Low to High</option>
+            <option>Name A - Z</option>
+            <option>Name Z - A</option>
           </select>
         </div>
         {isError && <div>Something went wrong ...</div>}

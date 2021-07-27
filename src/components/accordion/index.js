@@ -14,7 +14,7 @@ const Accordion = ({data}) => {
   const classes = [styles.accordion, isOpen ? styles.accOpen : styles.accClosed];
 
   return (
-    <div onClick={e => toggleAccordion(e)} className={classes.join(" ")}>
+    <button onClick={e => toggleAccordion(e)} className={classes.join(" ")}>
       <Chevron />
       <p className={styles.accordionName}>{data.name}</p>
       <div className={styles.accordionInner}>
@@ -22,7 +22,7 @@ const Accordion = ({data}) => {
         <p>ABV: {data.abv}%</p>
         <p>First Brewed: {data.first_brewed}</p>
       </div>
-    </div>
+    </button>
   )
 }
 

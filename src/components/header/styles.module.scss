@@ -72,6 +72,10 @@
   background-color: $teal;
   text-transform: lowercase;
 
+  &:focus {
+    box-shadow: 0 0 0px 8px $highlight;
+  }
+
   @media all and (min-width: $tablet) {
     font-size: 28px;
     letter-spacing: -2px;

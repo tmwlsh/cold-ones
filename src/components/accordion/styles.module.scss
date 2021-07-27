@@ -1,6 +1,8 @@
 @import "../../sass/variables.scss";
 
 .accordion {
+  width: 100%;
+  appearance: none;
   display: block;
   cursor: pointer;
   position: relative;
@@ -9,6 +11,12 @@
   background-color: $teal;
   padding: 25px 100px 25px 45px;
   border: 5px solid $teal;
+  text-align: left;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0px 8px $highlight;
+  }
 
   svg {
     top: 30px;
